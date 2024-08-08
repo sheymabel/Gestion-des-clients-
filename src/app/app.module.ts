@@ -21,6 +21,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { InscrireComponent } from './inscrire/inscrire.component';
+import { ForfailtsComponent } from './forfailts/forfailts.component';
 //import { LoginComponent } from './login/login.component';
 //import { LconctionComponent } from './lconction/lconction.component';
 //import { ConnectionComponent } from './connection/connection.component';
@@ -40,6 +41,7 @@ import { InscrireComponent } from './inscrire/inscrire.component';
     FormComponent,
     ConnexionComponent,
     InscrireComponent,
+    ForfailtsComponent,
     //LoginComponent,
     //LconctionComponent,
     //ConnectionComponent,

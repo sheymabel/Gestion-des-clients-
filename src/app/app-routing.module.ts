@@ -19,6 +19,7 @@ import { FormComponent } from './clientes/form.component';
 
 import { ConnexionComponent } from './connexion/connexion.component';
 import { InscrireComponent } from "./inscrire/inscrire.component";
+import { ForfailtsComponent } from "./forfailts/forfailts.component";
 
 const appRoute: Routes =[
     /*{path:'', redirectTo:'/clientes', pathMatch: 'full'},*/
@@ -27,7 +28,9 @@ const appRoute: Routes =[
     {path:'clientes/:id',component:FormComponent},
     {path:'connexion', component:ConnexionComponent},
     {path:'inscrire', component:InscrireComponent},
-    {path:'hero', component:HeroComponent}
+    {path:'hero', component:HeroComponent},
+    {path:'forfaits', component:ForfailtsComponent},
+
   ]
 
 
