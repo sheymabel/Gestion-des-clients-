@@ -22,10 +22,10 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   
-    padding: 50px 0;
+    padding: 100px 0;
   }
   .ag-courses_item {
-    -ms-flex-preferred-size: calc(33.33333% - 30px);
+    -ms-flex-preferred-size: calc(33.3333% - 300px);
     flex-basis: calc(33.33333% - 30px);
   
     margin: 0 15px 30px;
@@ -60,7 +60,7 @@
     overflow: hidden;
   
     font-weight: bold;
-    font-size: 30px;
+    font-size: 15px;
     color: #FFF;
   
     z-index: 2;

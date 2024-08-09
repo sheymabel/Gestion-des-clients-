@@ -6,6 +6,9 @@ import { Component } from "@angular/core";
     styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-    business: string = '';
-    logo: string = 'https://www.liblogo.com/lib/orange-logo.html';
+
+    title: string = 'OrangeLink  ';
+    text: string = ' Votre lien essentiel vers un avenir connecté et innovant  ';
+
+   
 }

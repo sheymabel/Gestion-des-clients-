@@ -8,9 +8,7 @@ import { Component } from "@angular/core";
 })
 
 export class BannerComponent {
-    title: string = 'OrangeLink  ';
-    text: string = ' Votre lien essentiel vers un avenir connecté et innovant  ';
-
-   
+    business: string = '';
+    logo: string = 'https://www.liblogo.com/lib/orange-logo.html';
     
 }

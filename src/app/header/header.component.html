@@ -1,66 +1,21 @@
+<div class="flex items-center gap-x-6 bg-gray-900 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
+  <p class="text-sm leading-3 text-white">
+      <a href="#">
+          <strong class="font-semibold orange-title">{{ title }}</strong><br>
+          <svg viewBox="0 0 2 2" class="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true">
+              
+          </svg>
+          <span class="styled-text">{{ text }}</span><span ></span>
+      </a>
+  </p>
 
 
-<nav>
-  <div class="wrapper">
-    <div class="logo"><a href="./assets/R.png"><img src="./assets/R.png" alt=""></a></div>
-    <input type="radio" name="slider" id="menu-btn">
-    <input type="radio" name="slider" id="close-btn">
-    <ul class="nav-links">
-      <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
-      <li><a href="/" class="text-sm font-semibold leading-6 text-gray-900">Accueil</a></li>
-      <li>  <a [routerLink]="['/forfaits']" routerLinkActive="router-link-active" class="text-sm font-semibold leading-6 text-gray-900">Forfaits</a></li>
-      <li>
-        <a [routerLink]="['/clientes']" routerLinkActive="router-link-active" class="text-sm font-semibold leading-6 text-gray-900">Actualités</a>
-        <input type="checkbox" id="showDrop">
-        <label for="showDrop" class="mobile-item">Dropdown Menu</label>
-        <ul class="drop-menu">
-          <li><a href="#">Drop menu 1</a></li>
-          <li><a href="#">Drop menu 2</a></li>
-          <li><a href="#">Drop menu 3</a></li>
-          <li><a href="#">Drop menu 4</a></li>
-        </ul>
-      </li>
-      <li>
-        <a [routerLink]="['/']" routerLinkActive="router-link-active" class="text-sm font-semibold leading-6 text-gray-900">Contact</a>
-        <input type="checkbox" id="showMega">
-        <a [routerLink]="['/connexion']" routerLinkActive="router-link-active" class="text-sm font-semibold leading-6 text-gray-900">Connexion<span aria-hidden="true"></span></a>
-        <div class="mega-box">
-          <div class="content">
-            <div class="row">
-              <img src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg" alt="">
-            </div>
-            <div class="row">
-              <header>Design Services</header>
-              <ul class="mega-links">
-                <li><a href="#">Graphics</a></li>
-                <li><a href="#">Vectors</a></li>
-                <li><a href="#">Business cards</a></li>
-                <li><a href="#">Custom logo</a></li>
-              </ul>
-            </div>
-            <div class="row">
-              <header>Email Services</header>
-              <ul class="mega-links">
-                <li><a href="#">Personal Email</a></li>
-                <li><a href="#">Business Email</a></li>
-                <li><a href="#">Mobile Email</a></li>
-                <li><a href="#">Web Marketing</a></li>
-              </ul>
-            </div>
-            <div class="row">
-              <header>Security services</header>
-              <ul class="mega-links">
-                <li><a href="#">Site Seal</a></li>
-                <li><a href="#">VPS Hosting</a></li>
-                <li><a href="#">Privacy Seal</a></li>
-                <li><a href="#">Website design</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </li>
-   
-    </ul>
-  </div>
-</nav>
+    <div class="flex flex-1 justify-end">
+      <button type="button" class="-m-3 p-3 focus-visible:outline-offset-[-4px]">
+        <span class="sr-only">Dismiss</span>
+        <svg class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        </svg>
+      </button>
+    </div>
+</div>
 
