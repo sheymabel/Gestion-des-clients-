@@ -1,53 +1,82 @@
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <!-- We've used 3xl here, but feel free to try other max-widths based on your needs -->
-    <div class="mx-auto max-w-3xl">
-        <div class="px-4 sm:px-6 lg:px-8">
-            <div class="sm:flex sm:items-center">
-              <div class="sm:flex-auto">
-                <h1 class="text-base font-semibold leading-6 text-gray-900">{{ title }}</h1>
-                <p class="mt-2 text-sm text-gray-700">{{ description }}</p>
-              </div>
-              <div class="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
-                <button  class="block rounded-md bg-gray-900 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">Ajouter Clientes</button>
-              </div>
-            </div>
-            <div class="mt-8 flow-root">
-              <div class="-mx-4 -my-2 sm:-mx-6 lg:-mx-8">
-                <div class="inline-block min-w-full py-2 align-middle">
-                  <table class="min-w-full border-separate border-spacing-0">
-                    <thead>
-                      <tr>
-                        <th scope="col" class="sticky top-0 z-10 border-b border-gray-300 bg-white bg-opacity-75 py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter sm:pl-6 lg:pl-8">nom</th>
-                        <th scope="col" class="sticky top-0 z-10 hidden border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter sm:table-cell">prenom</th>
-                        <th scope="col" class="sticky top-0 z-10 hidden border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter lg:table-cell">Email</th>
-                        <th scope="col" class="sticky top-0 z-10 border-b border-gray-300 bg-white bg-opacity-75 px-3 py-3.5 text-left text-sm font-semibold text-gray-900 backdrop-blur backdrop-filter">CreateAt</th>
-                        <th scope="col" class="sticky top-0 z-10 border-b border-gray-300 bg-white bg-opacity-75 py-3.5 pl-3 pr-4 backdrop-blur backdrop-filter sm:pr-6 lg:pr-8">
-                          <span>modifier</span>
-                        </th>
-                        <th scope="col" class="sticky top-0 z-10 border-b border-gray-300 bg-white bg-opacity-75 py-3.5 pl-3 pr-4 backdrop-blur backdrop-filter sm:pr-6 lg:pr-8">
-                          <span>Supprimer</span>
-                        </th>
-                      </tr>
-                      <link rel="stylesheet" href="form.component.html">
-                    </thead>
-                    <tbody *ngIf="clientes != null">
-                      <tr *ngFor="let cliente of clientes">
-                        <td class="whitespace-nowrap border-b border-gray-200 py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6 lg:pl-8">{{ cliente.getName() }}</td>
-                        <td class="whitespace-nowrap border-b border-gray-200 hidden px-3 py-4 text-sm text-gray-500 sm:table-cell">{{ cliente.getLastname() }}</td>
-                        <td class="whitespace-nowrap border-b border-gray-200 hidden px-3 py-4 text-sm text-gray-500 lg:table-cell">{{ cliente.getEmail() }}</td>
-                        <td class="whitespace-nowrap border-b border-gray-200 px-3 py-4 text-sm text-gray-500">{{ cliente.getCreateAt() }}</td>
-                        <td class="relative whitespace-nowrap border-b border-gray-200 py-4 pr-4 pl-3 text-right text-sm font-medium sm:pr-8 lg:pr-8">
-                        <a >Modifier</a>
-                        <td (click)="delete(cliente)" class="text-red-600 hover:text-red-900 py-4 pr-4 pl-3 " >
-                          Delete
-                        </td>
-                      </tr>
-                      </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-        </div>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Clients</title>
+    <link rel="stylesheet" href="clientes.component.css">
+    
+    <h1>Gestion des Clients</h1>
+
+    <div>
+        <label for="nom" class="labels">Nom: </label>
+        <input type="text" id="nom" class="textinput" placeholder="Entrez le nom (obligatoire)">
+        <span style="margin-left: 20px;"></span>
+        <label for="prenom" class="labels">Prénom: </label>
+        <input type="text" id="prenom" class="textinput" placeholder="Entrez le prénom (obligatoire)">
     </div>
-</div>
+
+    <div>
+        <label for="telephone" class="labels">Téléphone: </label>
+        <input type="text" id="telephone" class="textinput" placeholder="Entrez le téléphone">
+        <span style="margin-left: 20px;"></span>
+        <label for="adresse" class="labels">Adresse: </label>
+        <input type="text" id="adresse" class="textinput" placeholder="Entrez l'adresse">
+    </div>
+
+    <div>
+        <label for="email" class="labels">Email: </label>
+        <input type="email" id="email" class="textinput" placeholder="Entrez l'email">
+    </div>
+
+    <br>
+
+    <div id="table-wrapper">
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Téléphone</th>
+                    <th>Adresse</th>
+                    <th>Email</th>
+                    <th>Sélectionner</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <br><br>
+
+    <div class="button-container">
+        <button type="button" class="buttons" onclick="addData()" title="Ajouter une nouvelle ligne">Ajouter</button>
+        <button type="button" class="buttons" onclick="updateData()" title="Mettre à jour la ligne sélectionnée">Mettre à jour</button>
+        <button type="button" class="buttons" onclick="deleteData()" title="Supprimer la ligne sélectionnée">Supprimer</button>
+        <span style="margin-left: 10px;"></span>
+        <button type="button" class="buttons" onclick="clearData()" title="Effacer la sélection">Effacer</button>
+        <button type="button" class="buttons" onclick="selectFirstOrLastRow(1)" title="Sélectionner la première ligne">Premier</button>
+        <button type="button" class="buttons" onclick="selectFirstOrLastRow()" title="Sélectionner la dernière ligne">Dernier</button>
+        <span style="margin-left: 10px;"></span>
+      
+      </div>
+
+    <br><br>
+
+    <div class="button-container">
+      <a  [routerLink]="['/contrat']"   href="contrat.component.html" class="text-sm font-semibold leading-6 text-gray-900">CONTRATS</a>
+
+    </div>
+
+    <br><br>
+
+  
+
+    <br><br>
+
+    <div id="status-wrapper">
+        <span class="labels">Statut: </span>
+        <span id="status"></span>
+    </div>
+
+    
+
 

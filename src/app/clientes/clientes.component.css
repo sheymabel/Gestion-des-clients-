@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4; /* Couleur de fond claire */
+    color: black;
+}
+
+h1 {
+    color: orange;
+}
+
+.textinput {
+    width: 200px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.labels {
+    font-weight: bold;
+}
+
+.buttons {
+    padding: 8px 14px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+    border-style: none;
+    cursor: pointer;
+    margin: 5px; /* Espace entre les boutons */
+}
+
+.buttons:hover {
+    background-color: darkorange;
+}
+
+.button-contracts {
+    padding: 15px 20px;
+    margin: 10px; /* Espace autour du bouton CONTRATS */
+    background-color: orange;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-contracts:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#table-wrapper {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.r-select {
+    background-color: lightblue;
+}
+
+.r-unselect {
+    background-color: white;
+}
+

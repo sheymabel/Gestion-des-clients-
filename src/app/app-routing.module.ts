@@ -9,28 +9,32 @@ import { DirectivaComponent } from './directiva/directiva.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { HeroComponent } from './hero/hero.component';
 
-import { ClienteService } from './clientes/cliente.service';
 
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { FormComponent } from './clientes/form.component';
 
 import { ConnexionComponent } from './connexion/connexion.component';
 import { InscrireComponent } from "./inscrire/inscrire.component";
 import { ForfailtsComponent } from "./forfailts/forfailts.component";
+import { SmartphoneComponent } from "./smartphone/smartphone.component";
+import { ContratComponent } from "./contrat/contrat.component";
+import { TablettesComponent } from "./tablettes/tablettes.component";
+import { AccessoriesComponent } from "./accessories/accessories.component";
 
 const appRoute: Routes =[
     /*{path:'', redirectTo:'/clientes', pathMatch: 'full'},*/
     {path:'',component:HomeComponent},
     {path:'clientes',component:ClientesComponent},
-    {path:'clientes/:id',component:FormComponent},
     {path:'connexion', component:ConnexionComponent},
     {path:'inscrire', component:InscrireComponent},
     {path:'hero', component:HeroComponent},
     {path:'forfaits', component:ForfailtsComponent},
-
+    {path:'smartphone', component:SmartphoneComponent},
+    {path:'tablettes', component:TablettesComponent},
+    {path:'accessoires', component:AccessoriesComponent},
+    {path:'contrat', component:ContratComponent},
   ]
 
 

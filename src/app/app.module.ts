@@ -9,19 +9,23 @@ import { DirectivaComponent } from './directiva/directiva.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { HeroComponent } from './hero/hero.component';
 
-import { ClienteService } from './clientes/cliente.service';
+//import { ClienteService } from './clientes/cliente.service';
 
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { FormComponent } from './clientes/form.component';
+//import { FormComponent } from './clientes/form.component';
 
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { InscrireComponent } from './inscrire/inscrire.component';
 import { ForfailtsComponent } from './forfailts/forfailts.component';
+import { SmartphoneComponent } from './smartphone/smartphone.component';
+import { ContratComponent } from './contrat/contrat.component';
+import { TablettesComponent } from './tablettes/tablettes.component';
+import { AccessoriesComponent } from './accessories/accessories.component';
 //import { LoginComponent } from './login/login.component';
 //import { LconctionComponent } from './lconction/lconction.component';
 //import { ConnectionComponent } from './connection/connection.component';
@@ -38,10 +42,14 @@ import { ForfailtsComponent } from './forfailts/forfailts.component';
     ClientesComponent,
     HeroComponent,
     HomeComponent,
-    FormComponent,
+   // FormComponent,
     ConnexionComponent,
     InscrireComponent,
     ForfailtsComponent,
+    SmartphoneComponent,
+    ContratComponent,
+    TablettesComponent,
+    AccessoriesComponent,
     //LoginComponent,
     //LconctionComponent,
     //ConnectionComponent,
@@ -54,7 +62,7 @@ import { ForfailtsComponent } from './forfailts/forfailts.component';
     FormsModule,
     AppRoutingModule,
   ],
-  providers: [ClienteService],
+  //providers: [ClienteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
